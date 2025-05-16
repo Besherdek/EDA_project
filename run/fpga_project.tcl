@@ -15,6 +15,7 @@ add_file -type verilog r:/Applications/Gowin/basics-graphics-music/labs/3_music/
 add_file -type verilog r:/Applications/Gowin/basics-graphics-music/labs/3_music/my_proj/lab_top.sv
 add_file -type verilog r:/Applications/Gowin/basics-graphics-music/labs/3_music/my_proj/Multiply.v
 add_file -type verilog r:/Applications/Gowin/basics-graphics-music/labs/3_music/my_proj/SdfUnit.v
+add_file -type verilog r:/Applications/Gowin/basics-graphics-music/labs/3_music/my_proj/SdfUnit2.v
 add_file -type verilog r:/Applications/Gowin/basics-graphics-music/labs/3_music/my_proj/Twiddle.v
 add_file -type verilog r:/Applications/Gowin/basics-graphics-music/boards/tang_nano_9k_lcd_480_272_tm1638/board_specific_top.sv
 add_file -type verilog r:/Applications/Gowin/basics-graphics-music/boards/tang_nano_9k_lcd_480_272_tm1638/gowin_rpll.v

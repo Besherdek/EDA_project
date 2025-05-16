@@ -1,5 +1,5 @@
 //----------------------------------------------------------------------
-//  FFT: 64-Point FFT Using Radix-2^2 Single-Path Delay Feedback
+//  FFT: 128-Point FFT Using Radix-2^2 Single-Path Delay Feedback
 //----------------------------------------------------------------------
 module FFT #(
     parameter   WIDTH = 16
@@ -16,7 +16,7 @@ module FFT #(
 //----------------------------------------------------------------------
 //  Data must be input consecutively in natural order.
 //  The result is scaled to 1/N and output in bit-reversed order.
-//  The output latency is 71 clock cycles.
+//  The output latency is 137 clock cycles.
 //----------------------------------------------------------------------
 
 wire            su1_do_en;
@@ -25,8 +25,11 @@ wire[WIDTH-1:0] su1_do_im;
 wire            su2_do_en;
 wire[WIDTH-1:0] su2_do_re;
 wire[WIDTH-1:0] su2_do_im;
+wire            su3_do_en;
+wire[WIDTH-1:0] su3_do_re;
+wire[WIDTH-1:0] su3_do_im;
 
-SdfUnit #(.N(64),.M(64),.WIDTH(WIDTH)) SU1 (
+SdfUnit #(.N(128),.M(128),.WIDTH(WIDTH)) SU1 (
     .clock  (clock      ),  //  i
     .reset  (reset      ),  //  i
     .di_en  (di_en      ),  //  i
@@ -37,7 +40,7 @@ SdfUnit #(.N(64),.M(64),.WIDTH(WIDTH)) SU1 (
     .do_im  (su1_do_im  )   //  o
 );
 
-SdfUnit #(.N(64),.M(16),.WIDTH(WIDTH)) SU2 (
+SdfUnit #(.N(128),.M(32),.WIDTH(WIDTH)) SU2 (
     .clock  (clock      ),  //  i
     .reset  (reset      ),  //  i
     .di_en  (su1_do_en  ),  //  i
@@ -48,12 +51,23 @@ SdfUnit #(.N(64),.M(16),.WIDTH(WIDTH)) SU2 (
     .do_im  (su2_do_im  )   //  o
 );
 
-SdfUnit #(.N(64),.M(4),.WIDTH(WIDTH)) SU3 (
+SdfUnit #(.N(128),.M(8),.WIDTH(WIDTH)) SU3 (
     .clock  (clock      ),  //  i
     .reset  (reset      ),  //  i
     .di_en  (su2_do_en  ),  //  i
     .di_re  (su2_do_re  ),  //  i
     .di_im  (su2_do_im  ),  //  i
+    .do_en  (su3_do_en  ),  //  o
+    .do_re  (su3_do_re  ),  //  o
+    .do_im  (su3_do_im  )   //  o
+);
+
+SdfUnit2 #(.WIDTH(WIDTH)) SU4 (
+    .clock  (clock      ),  //  i
+    .reset  (reset      ),  //  i
+    .di_en  (su3_do_en  ),  //  i
+    .di_re  (su3_do_re  ),  //  i
+    .di_im  (su3_do_im  ),  //  i
     .do_en  (do_en      ),  //  o
     .do_re  (do_re      ),  //  o
     .do_im  (do_im      )   //  o

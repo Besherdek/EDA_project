@@ -6,6 +6,7 @@ add new file: "r:/Applications/Gowin/basics-graphics-music/labs/3_music/my_proj/
 add new file: "r:/Applications/Gowin/basics-graphics-music/labs/3_music/my_proj/lab_top.sv"
 add new file: "r:/Applications/Gowin/basics-graphics-music/labs/3_music/my_proj/Multiply.v"
 add new file: "r:/Applications/Gowin/basics-graphics-music/labs/3_music/my_proj/SdfUnit.v"
+add new file: "r:/Applications/Gowin/basics-graphics-music/labs/3_music/my_proj/SdfUnit2.v"
 add new file: "r:/Applications/Gowin/basics-graphics-music/labs/3_music/my_proj/Twiddle.v"
 add new file: "r:/Applications/Gowin/basics-graphics-music/boards/tang_nano_9k_lcd_480_272_tm1638/board_specific_top.sv"
 add new file: "r:/Applications/Gowin/basics-graphics-music/boards/tang_nano_9k_lcd_480_272_tm1638/gowin_rpll.v"
@@ -45,6 +46,7 @@ Analyzing included file 'R:\Applications\Gowin\basics-graphics-music\labs\common
 Back to file 'R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\lab_top.sv'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\lab_top.sv":1)
 Analyzing Verilog file 'R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\Multiply.v'
 Analyzing Verilog file 'R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit.v'
+Analyzing Verilog file 'R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit2.v'
 Analyzing Verilog file 'R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\Twiddle.v'
 Analyzing Verilog file 'R:\Applications\Gowin\basics-graphics-music\boards\tang_nano_9k_lcd_480_272_tm1638\board_specific_top.sv'
 Analyzing included file 'R:\Applications\Gowin\basics-graphics-music\labs\common\config.svh'("R:\Applications\Gowin\basics-graphics-music\boards\tang_nano_9k_lcd_480_272_tm1638\board_specific_top.sv":1)
@@ -121,35 +123,37 @@ Compiling module 'lab_top(clk_mhz=27,w_key=8,w_gpio=4,screen_width=480,screen_he
 Extracting RAM for identifier 'fft_out_re'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\lab_top.sv":164)
 Extracting RAM for identifier 'fft_out_im'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\lab_top.sv":165)
 WARN  (EX3791) : Expression size 6 truncated to fit in target size 5("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\lab_top.sv":100)
-WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\lab_top.sv":104)
-WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\lab_top.sv":135)
-WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\lab_top.sv":182)
-WARN  (EX3791) : Expression size 7 truncated to fit in target size 6("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\lab_top.sv":198)
+WARN  (EX3791) : Expression size 8 truncated to fit in target size 7("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\lab_top.sv":104)
+WARN  (EX3791) : Expression size 8 truncated to fit in target size 7("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\lab_top.sv":135)
+WARN  (EX3791) : Expression size 8 truncated to fit in target size 7("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\lab_top.sv":183)
+WARN  (EX3791) : Expression size 8 truncated to fit in target size 7("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\lab_top.sv":206)
 Compiling module 'FFT'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\FFT.v":4)
-Compiling module 'SdfUnit'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit.v":4)
+Compiling module 'SdfUnit(N=128,M=128)'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit.v":4)
 Compiling module 'Butterfly'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\Butterfly.v":4)
-Compiling module 'DelayBuffer'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\DelayBuffer.v":4)
+Compiling module 'DelayBuffer(DEPTH=64)'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\DelayBuffer.v":4)
 Compiling module 'Butterfly(RH=1)'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\Butterfly.v":4)
 WARN  (EX3791) : Expression size 31 truncated to fit in target size 16("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\Butterfly.v":27)
 WARN  (EX3791) : Expression size 31 truncated to fit in target size 16("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\Butterfly.v":28)
 WARN  (EX3791) : Expression size 31 truncated to fit in target size 16("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\Butterfly.v":29)
 WARN  (EX3791) : Expression size 31 truncated to fit in target size 16("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\Butterfly.v":30)
-Compiling module 'DelayBuffer(DEPTH=16)'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\DelayBuffer.v":4)
-WARN  (EX3791) : Expression size 6 truncated to fit in target size 4("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit.v":232)
+Compiling module 'DelayBuffer'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\DelayBuffer.v":4)
+WARN  (EX3791) : Expression size 7 truncated to fit in target size 5("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit.v":232)
 Compiling module 'Twiddle'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\Twiddle.v":4)
 Compiling module 'Multiply'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\Multiply.v":4)
 WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\Multiply.v":25)
 WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\Multiply.v":26)
 WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\Multiply.v":27)
 WARN  (EX3791) : Expression size 17 truncated to fit in target size 16("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\Multiply.v":28)
-Compiling module 'SdfUnit(M=16)'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit.v":4)
+Compiling module 'SdfUnit(N=128,M=32)'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit.v":4)
+Compiling module 'DelayBuffer(DEPTH=16)'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\DelayBuffer.v":4)
 Compiling module 'DelayBuffer(DEPTH=8)'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\DelayBuffer.v":4)
+WARN  (EX3791) : Expression size 7 truncated to fit in target size 5("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit.v":232)
+Compiling module 'SdfUnit(N=128,M=8)'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit.v":4)
 Compiling module 'DelayBuffer(DEPTH=4)'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\DelayBuffer.v":4)
-WARN  (EX3791) : Expression size 6 truncated to fit in target size 4("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit.v":232)
-Compiling module 'SdfUnit(M=4)'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit.v":4)
 Compiling module 'DelayBuffer(DEPTH=2)'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\DelayBuffer.v":4)
+WARN  (EX3791) : Expression size 7 truncated to fit in target size 5("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit.v":232)
+Compiling module 'SdfUnit2'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit2.v":4)
 Compiling module 'DelayBuffer(DEPTH=1)'("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\DelayBuffer.v":4)
-WARN  (EX3791) : Expression size 6 truncated to fit in target size 4("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit.v":232)
 WARN  (EX1998) : Net 'fft_di_im[15]' does not have a driver("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\lab_top.sv":86)
 Compiling module 'tm1638_board_controller(clk_mhz=27)'("R:\Applications\Gowin\basics-graphics-music\peripherals\tm1638_board.sv":20)
 Compiling module 'tm1638_sio(clk_mhz=27)'("R:\Applications\Gowin\basics-graphics-music\peripherals\tm1638_board.sv":299)
@@ -203,8 +207,6 @@ Running technical mapping ...
 [75%] Tech-Mapping Phase 2 completed
 [80%] Tech-Mapping Phase 3 completed
 [90%] Tech-Mapping Phase 4 completed
-WARN  (NL0002) : The module "Multiply" instantiated to "MU" is swept in optimizing("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit.v":257)
-WARN  (NL0002) : The module "Twiddle" instantiated to "TW" is swept in optimizing("R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\SdfUnit.v":240)
 WARN  (NL0002) : The module "slow_clk_gen" instantiated to "i_slow_clk_gen" is swept in optimizing("R:\Applications\Gowin\basics-graphics-music\boards\tang_nano_9k_lcd_480_272_tm1638\board_specific_top.sv":225)
 WARN  (NL0002) : The module "tm1638_registers" instantiated to "i_tm1638_regs" is swept in optimizing("R:\Applications\Gowin\basics-graphics-music\peripherals\tm1638_board.sv":147)
 [95%] Generate netlist file "R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\run\impl\gwsynthesis\fpga_project.vg" completed
@@ -237,5 +239,5 @@ Generate file "R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\
 Generate file "R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\run\impl\pnr\fpga_project.rpt.html" completed
 Generate file "R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\run\impl\pnr\fpga_project.rpt.txt" completed
 Generate file "R:\Applications\Gowin\basics-graphics-music\labs\3_music\my_proj\run\impl\pnr\fpga_project.tr.html" completed
-Sun May  4 16:55:32 2025
+Mon May 12 22:03:29 2025
 
